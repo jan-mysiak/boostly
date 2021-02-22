@@ -10,6 +10,10 @@
     height: 100%;
     color: white;
     transition: opacity .3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
 }
 
 .home {

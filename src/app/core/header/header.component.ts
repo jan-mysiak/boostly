@@ -1,7 +1,7 @@
 import { NavigationService } from './../services/navigation.service';
 import { Component, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
-// import { faHome, faAppleAlt, faInfoCircle, faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faAppleAlt, faInfoCircle, faHeart, faQuestion, faHandPointRight } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-header',
@@ -33,8 +33,8 @@ export class HeaderComponent implements OnDestroy {
     return progress[this.activeSection] ? progress[this.activeSection] : 0;
   }
 
-  // homeIcon = faHome;
-  // wellnessIcon = faAppleAlt;
-  // aboutUsIcon = faInfoCircle;
-  // registerIcon = faHeart;
+  homeIcon = faHome;
+  wellnessIcon = faHeart;
+  aboutUsIcon = faQuestion;
+  registerIcon = faHandPointRight;
 }

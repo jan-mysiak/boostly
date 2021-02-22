@@ -14,11 +14,18 @@
 
     <li class="nav-link" [class.active]="activeSection == 0" (click)="setActiveSection(0)" [routerLink]="['/']">
         Hem
+        <fa-icon [icon]="homeIcon"></fa-icon>
     </li>
     <li class="nav-link" [class.active]="activeSection == 1" (click)="setActiveSection(1)" [routerLink]="['/']">
-        Wellness</li>
-    <li class="nav-link" [class.active]="activeSection == 2" (click)="setActiveSection(2)" [routerLink]="['/']">Om oss
+        Wellness
+        <fa-icon [icon]="wellnessIcon"></fa-icon>
+    </li>
+    <li class="nav-link" [class.active]="activeSection == 2" (click)="setActiveSection(2)" [routerLink]="['/']">
+        Om oss
+        <fa-icon [icon]="aboutUsIcon"></fa-icon>
     </li>
     <li class="nav-link register" routerLinkActive="active" (click)="setActiveSection(-1)" [routerLink]="['/register']">
-        Intresseanmälan</li>
+        Intresseanmälan
+        <fa-icon [icon]="registerIcon"></fa-icon>
+    </li>
 </ul>

@@ -80,16 +80,17 @@
     .content {
         background: linear-gradient(to top left, white calc(50% - 0.8px), var(--accent) calc(50% + 0.8px));
         animation: slide-in-down .6s;
+        padding: 1.5rem 5rem;
     }
     .content .title {
-        font-size: 3rem;
+        font-size: 4rem;
         align-self: flex-start;
     }
     .content .logo {
         max-height: 15rem;
         align-self: flex-start;
         margin: 0;
-        width: 25%;
+        width: 40%;
     }
     .content .form-header {
         color: var(--accent);
