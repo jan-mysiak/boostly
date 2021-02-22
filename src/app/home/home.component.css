@@ -1,0 +1,29 @@
+:host {
+    display: block;
+    margin-top: 6rem;
+    height: calc(100vh - 6rem);
+    overflow-y: auto;
+}
+
+:host>* {
+    opacity: .4;
+    height: 100%;
+    color: white;
+    transition: opacity .3s;
+}
+
+.home {
+    background: orange;
+}
+
+.wellness {
+    background: purple;
+}
+
+.about-us {
+    background: green;
+}
+
+.active {
+    opacity: .7;
+}
