@@ -1,13 +1,14 @@
 :host {
     display: block;
     margin-top: 6rem;
+    min-height: calc(100vh - 6rem);
     height: calc(100vh - 6rem);
     overflow-y: auto;
 }
 
 :host>* {
     opacity: .4;
-    height: 100%;
+    min-height: 100%;
     color: white;
     transition: opacity .3s;
     display: flex;
@@ -17,15 +18,15 @@
 }
 
 .home {
-    background: orange;
+    background: rgb(255, 165, 0);
 }
 
 .wellness {
-    background: purple;
+    background: rgb(128, 0, 128);
 }
 
 .about-us {
-    background: green;
+    background: rgb(0, 128, 0);
 }
 
 .active {

@@ -8,7 +8,7 @@
 
 .content {
     padding: 1.5rem;
-    height: 100%;
+    min-height: 100%;
     display: flex;
     flex-direction: column;
     color: white;
@@ -41,7 +41,7 @@
 }
 
 .content .form {
-    border-radius: 6px;
+    border-radius: 12px;
     min-height: 10rem;
     max-width: 26rem;
     width: 100%;
@@ -80,7 +80,7 @@
     .content {
         background: linear-gradient(to top left, white calc(50% - 0.8px), var(--accent) calc(50% + 0.8px));
         animation: slide-in-down .6s;
-        padding: 1.5rem 5rem;
+        /* padding: 1.5rem 5rem; */
     }
     .content .title {
         font-size: 4rem;
@@ -90,7 +90,7 @@
         max-height: 15rem;
         align-self: flex-start;
         margin: 0;
-        width: 40%;
+        width: 25%;
     }
     .content .form-header {
         color: var(--accent);
