@@ -2,8 +2,11 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  template: `
+  <app-navigation></app-navigation>
+  <app-sections></app-sections>
+  `
 })
 export class AppComponent {
   title = 'boostly';

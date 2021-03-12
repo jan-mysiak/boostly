@@ -1,0 +1,57 @@
+:host {
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(../../../../assets/img/cover/cover6.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+}
+
+.card {
+    text-align: center;
+}
+
+.header {
+    font-family: var(--secondary-font);
+    font-style: italic;
+    font-size: 3em;
+    /* color: var(--accent); */
+    line-height: 1;
+}
+
+.accent {
+    color: var(--accent);
+}
+
+.text {
+    word-break: break-all;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    font-weight: 300;
+    font-size: .8em;
+}
+
+.register-btn {
+    color: var(--secondary-text);
+    border: solid 2px var(--accent);
+    background-color: var(--accent);
+    transition: all .3s ease;
+    padding: .7em;
+    border-radius: 6px;
+    font-size: .7em;
+    /* font-weight: 600; */
+    text-transform: uppercase;
+    cursor: pointer;
+    transform: translateZ(0) perspective(1px);
+    margin-top: 1rem;
+}
+
+.register-btn:hover, .register-btn:active {
+    background-color: transparent;
+    transform: scale(0.95);
+}
+
+@media screen and (min-width: 60rem) {
+    .text {
+        padding: 0 8rem;
+    }
+}

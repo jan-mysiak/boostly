@@ -1,6 +1,10 @@
 {
   "name": "boostly",
   "version": "0.0.0",
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

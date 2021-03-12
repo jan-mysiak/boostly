@@ -1,0 +1,132 @@
+:host {
+    background: var(--accent);
+    overflow: hidden;
+    padding-top: 6em !important;
+}
+
+.separator {
+    width: 100%;
+    height: 1rem;
+    background: white;
+    margin-bottom: 1rem;
+}
+
+.logo {
+    transition: transform .6s, max-width .6s;
+    transition-timing-function: cubic-bezier(.4, .1, .2, 1);
+    transform: translate(-10rem, -50vh);
+    max-width: 1rem;
+}
+
+:host.active .logo {
+    transition-delay: .9s;
+    transform: translate(0, 0);
+    max-width: 6rem;
+}
+
+.card {
+    max-width: 18rem;
+}
+
+.card-header {
+    display: flex;
+    height: 8rem;
+    align-items: flex-end;
+    font-size: 1em;
+    margin-bottom: 3em;
+}
+
+.header-text {
+    letter-spacing: 1px;
+    min-width: calc(100% - 7rem);
+    max-width: calc(100% - 7rem);
+    margin-left: 1rem;
+    padding-left: 1rem;
+    border-left: solid .5rem;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.form {
+    height: 9rem;
+    min-height: 9rem;
+    /* background: rgba(0, 0, 0, .3); */
+    background: white;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 12px;
+    box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, .3);
+    margin-bottom: 1rem;
+}
+
+input {
+    width: 100%;
+    border: solid 1px var(--accent);
+    border-radius: 6px;
+    height: 2.5em;
+    text-indent: 8px;
+    color: var(--primary-text);
+}
+
+.send-btn {
+    position: relative;
+    cursor: pointer;
+    border-radius: 6px;
+    color: white;
+    font-weight: 600;
+    padding: .5rem;
+    background-color: var(--accent);
+    width: 100%;
+    height: 2.5em;
+}
+
+.send-btn:after {
+    content: "";
+    background-color: rgba(112, 76, 182, 0.15);
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: width 1s linear, opacity 0.5s ease 1s;
+}
+
+.send-btn:active:after {
+    width: 0%;
+    opacity: 1;
+    transition: 0s
+}
+
+::placeholder {
+    color: var(--accent);
+}
+
+p {
+    text-align: center;
+    transition: opacity .3s linear;
+    margin-bottom: 1rem;
+    font-size: .8em;
+    letter-spacing: 1px;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+@media screen and (min-width: 60rem) {
+    :host {
+        padding-top: 10em !important;
+    }
+    .form {
+        height: 10rem;
+        min-height: 10rem;
+    }
+    .separator {
+        display: none;
+    }
+}
