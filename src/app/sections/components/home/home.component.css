@@ -37,7 +37,8 @@
     transition: all .3s ease;
     padding: .7em;
     border-radius: 6px;
-    font-size: .7em;
+    font-weight: 600;
+    /* font-size: 1rem; */
     /* font-weight: 600; */
     text-transform: uppercase;
     cursor: pointer;

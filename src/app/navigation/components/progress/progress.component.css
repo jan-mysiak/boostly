@@ -53,7 +53,7 @@
     align-items: center;
     color: white;
     right: 3rem;
-    /* font-weight: 600; */
+    font-weight: 600;
     cursor: pointer;
     animation: fade-in .6s linear .9s backwards;
     transition: color .3s linear;

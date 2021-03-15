@@ -1,6 +1,6 @@
 :host {
     position: fixed;
-    padding: 1.5em;
+    padding: 1.5rem;
     line-height: 1;
     transition: color .3s linear;
     z-index: 100;
@@ -36,7 +36,7 @@
 .line {
     margin: 8px 0;
     height: 5px;
-    width: 2.5em;
+    width: 50px;
     background-color: var(--secondary-text);
     transition: background-color .3s linear .3s;
 }
@@ -109,11 +109,11 @@
     }
     .hamburger:hover .lines {
         background: var(--accent);
-        padding: 1em;
+        padding: 1rem 1.3rem;
     }
     :host.logo-hidden .hamburger:hover .lines {
         background: var(--secondary-text);
-        padding: 1em;
+        padding: 1rem 1.3rem;
     }
     :host.logo-hidden .hamburger:hover .line {
         transition-delay: 0;

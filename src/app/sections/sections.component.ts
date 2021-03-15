@@ -83,10 +83,10 @@ export class SectionsComponent implements OnInit, OnDestroy, AfterContentInit {
 
   // Mouse wheel
   @HostListener("wheel", ["$event"]) onWheel(e: WheelEvent) {
-    e.preventDefault();
-
+    
     // Scroll to next/prev if not already scrolling
-    if (!this.scrollTimer) {
+    if (!this.scrollTimer && !e.ctrlKey) {
+      e.preventDefault();
       this.incrementStep(e.deltaY > 0);
     }
 
@@ -97,7 +97,7 @@ export class SectionsComponent implements OnInit, OnDestroy, AfterContentInit {
   @HostListener("window:keydown", ["$event"]) onKeyDown(e: KeyboardEvent) {
     const pressedKey = e.key;
 
-    if (ACCEPT_KEYS.includes(pressedKey)) {
+    if (ACCEPT_KEYS.includes(pressedKey) && !e.ctrlKey) {
       e.preventDefault();
       // Arrow Up
       if (pressedKey === ACCEPT_KEYS[0]) {

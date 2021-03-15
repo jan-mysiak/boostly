@@ -42,23 +42,21 @@
     max-width: calc(100% - 7rem);
     margin-left: 1rem;
     padding-left: 1rem;
-    border-left: solid .5rem;
-    font-weight: bold;
+    border-left: solid .1rem;
     line-height: 1.5;
 }
 
 .form {
     height: 9rem;
     min-height: 9rem;
-    /* background: rgba(0, 0, 0, .3); */
     background: white;
     padding: 1em;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    border-radius: 12px;
-    box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, .3);
+    border-radius: 6px;
+    box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, .4);
     margin-bottom: 1rem;
 }
 
@@ -120,7 +118,7 @@ p {
 
 @media screen and (min-width: 60rem) {
     :host {
-        padding-top: 10em !important;
+        /* padding-top: 10em !important; */
     }
     .form {
         height: 10rem;

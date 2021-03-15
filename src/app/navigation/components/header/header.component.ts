@@ -14,7 +14,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
   </div>
 
   <div class="brand">
-      <img src="/assets/img/logo/logo.svg" alt="" class="logo" />
+      <img src="assets/img/logo/logo.svg" alt="" class="logo" />
       <h4 class="brand-name">Boostly</h4>
   </div>
   `
