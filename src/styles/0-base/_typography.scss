@@ -1,0 +1,59 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 400;
+    line-height: 1.1;
+}
+h1 {
+    font-size: 4rem;
+}
+h2 {
+    font-size: 3.5rem;
+}
+h3 {
+    font-size: 3rem;
+}
+h4 {
+    font-size: 2.5rem;
+}
+h5 {
+    font-size: 2rem;
+}
+h6 {
+    font-size: 1.5rem;
+}
+
+p {
+    letter-spacing: 1px;
+    font-size: 1rem;
+    margin: 0;
+    font-weight: 400;
+}
+.text-sm {
+    font-size: 0.8rem;
+}
+.text-md {
+    font-size: 1rem;
+}
+.text-lg {
+    font-size: 1.2rem;
+}
+.text-bold {
+    font-weight: 600;
+}
+.text-light {
+    font-weight: 300;
+}
+
+.font-lobster {
+    font-family: var(--font-secondary);
+    font-style: italic;
+    text-transform: none;
+    letter-spacing: 0;
+}

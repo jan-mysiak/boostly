@@ -1,0 +1,12 @@
+.text-input {
+    border: none;
+    outline: none;
+    height: 2rem;
+    width: 100%;
+    border-radius: 6px;
+    text-indent: 0.5rem;
+    display: block;
+    font-size: 1rem;
+    font-family: var(--font-primary);
+    border: solid 1px rgba(#333, 0.3);
+}

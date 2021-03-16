@@ -1,0 +1,58 @@
+.m-2 {
+    margin: 2rem;
+}
+.mb-1 {
+    margin-bottom: 1rem;
+}
+.mb-2 {
+    margin-bottom: 2rem;
+}
+.mb-4 {
+    margin-bottom: 4rem;
+}
+.p-1 {
+    padding: 1rem;
+}
+.p-2 {
+    padding: 2rem;
+}
+
+.bg-full {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.b-none {
+    border: none !important;
+}
+
+.d-flex {
+    display: flex;
+}
+.items-center {
+    align-items: center;
+}
+.content-center {
+    justify-content: center;
+}
+
+// colors
+.color-pink {
+    color: var(--color-pink);
+}
+.color-gray {
+    color: var(--color-gray);
+}
+.color-white {
+    color: var(--color-white);
+}
+
+.border-none {
+    border: none;
+}

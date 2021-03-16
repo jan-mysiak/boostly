@@ -1,0 +1,142 @@
+@use "../0-base/contants" as c;
+@use "../2-helpers/animations";
+
+.header {
+    padding: 2rem;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    transition: color 0.3s ease-out, opacity 0.3s ease-out;
+    z-index: 998;
+
+    &.light {
+        color: c.$white;
+
+        & .hamburger-line {
+            background-color: c.$white;
+        }
+    }
+    &.dark {
+        color: c.$gray;
+
+        & .hamburger-line {
+            background-color: c.$gray;
+        }
+    }
+    &.hidden {
+        opacity: 0;
+
+        & .hamburger-lines {
+            transform: scale(0);
+        }
+    }
+
+    &-brand {
+        display: flex;
+        align-items: flex-start;
+        transition: opacity 0.3s ease-out, color 0.3s ease-out;
+
+        &.hidden {
+            transition-delay: 0s;
+            opacity: 0;
+            color: c.$gray;
+        }
+
+        &-logo {
+            max-width: 4rem;
+            transition: transform 0.3s, max-width 0.3s;
+            transition-delay: .8s;
+
+            &.hidden {
+                transition-delay: 0s;
+                transform: translate(-5rem, -10rem);
+                max-width: 0px;
+            }
+        }
+    }
+}
+
+.hamburger {
+    position: fixed;
+    align-items: center;
+    padding: inherit;
+    left: 0;
+    top: 1rem;
+    display: flex;
+    cursor: pointer;
+
+    // &.hidden {
+    //     .hamburger-lines {
+    //         transform: scale(0);
+    //     }
+    // }
+
+    &-lines {
+        transition: background-color, padding, transform;
+        transition-duration: 0.25s;
+        transition-timing-function: ease-out;
+        background-color: transparent;
+        border-radius: 999rem;
+        margin-right: 1rem;
+        padding: 0;
+    }
+
+    &-line {
+        height: 5px;
+        width: 3rem;
+        margin: 10px 0;
+        background-color: c.$white;
+        transition: background-color 0.3s ease-out;
+
+        &:first-child {
+            margin-top: 0;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &-text {
+        display: none;
+        transition: opacity 0.25s ease-out;
+        letter-spacing: 3px;
+    }
+}
+
+@media (min-width: c.$width-breakpoint) {
+    .header {
+        justify-content: center;
+    }
+
+    .hamburger {
+        &-text {
+            opacity: 0;
+            display: block;
+        }
+
+        &:hover {
+            .hamburger-lines {
+                padding: 1.6rem 1.2rem;
+                background-color: var(--color-pink);
+            }
+
+            .hamburger-text {
+                opacity: 1;
+            }
+        }
+        &.inverse:hover {
+            .hamburger-lines {
+                padding: 1.6rem 1.2rem;
+                background-color: var(--color-white);
+            }
+            .hamburger-line {
+                background-color: var(--color-pink);
+            }
+
+            .hamburger-text {
+                opacity: 1;
+            }
+        }
+    }
+}

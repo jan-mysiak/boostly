@@ -1,0 +1,60 @@
+html {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    // general
+    height: 100vh;
+    max-height: 100vh;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    overflow: hidden;
+    background: var(--color-pink);
+
+    // font
+    font-family: var(--font-primary);
+    color: var(--color-gray);
+    font-size: 1rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    // remove highlight
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+
+    &:after {
+        content: url(../../assets/img/cover/cover2.jpg) url(../../assets/img/cover/cover6.jpg);
+        display: none;
+    }
+}
+
+li,
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-gray);
+    font-weight: 400;
+    
+    &:hover {
+        color: var(--color-pink);
+        transition: color .3s linear;
+    } 
+}
+
+@media (min-width: 966px) {
+    html {
+        font-size: 18px;
+    }
+}

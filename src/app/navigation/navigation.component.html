@@ -1,0 +1,88 @@
+<div class="header" [class.hidden]="menuOpen" [class.light]="[0, 2, 4].includes(currentSlide)"
+    [class.dark]="[1, 3].includes(currentSlide)">
+
+    <div class="hamburger" (click)="toggleMenu()" [class.inverse]="progress > 95">
+        <div class="hamburger-lines">
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+        </div>
+        <p class="hamburger-text text-md">Meny</p>
+    </div>
+    <div class="header-brand" [class.hidden]="currentSlide === 0">
+        <img class="header-brand-logo" src="assets/img/logo/logo.svg" [class.hidden]="currentSlide === 4" />
+        <h2 class="font-lobster header-brand-name">Boostly</h2>
+    </div>
+</div>
+
+<div class="menu" [class.active]="menuOpen">
+    <div class="menu-header">
+        <h2 class="font-lobster">
+            Boostly
+        </h2>
+        <div class="menu-close" (click)="toggleMenu()">
+            &times;
+        </div>
+    </div>
+    <ul class="menu-links">
+        <li class="menu-link" (click)="setStep(0)" [class.active]="currentSlide === 0">
+            <h5>Hem</h5>
+        </li>
+        <li class="menu-link" (click)="setStep(1)" [class.active]="currentSlide === 1">
+            <h5>Wellness</h5>
+        </li>
+        <li class="menu-link" (click)="setStep(2)" [class.active]="currentSlide === 2">
+            <h5>Recept</h5>
+        </li>
+        <li class="menu-link" (click)="setStep(3)" [class.active]="currentSlide === 3">
+            <h5>Om oss</h5>
+        </li>
+    </ul>
+
+    <h6 class="menu-register-link color-pink" (click)="setStep(4)" [class.active]="currentSlide === 4">
+        Intresseanmälan
+    </h6>
+    <!-- <button class="btn btn-fill-pink w-100 mb-8" (click)="setStep(4)">Intresseanmälan</button> -->
+
+    <ul class="menu-socials">
+        <p class="text-bold text-lg text-bold">Kontakta oss</p>
+
+        <li>
+            <div class="fab fa-facebook"></div>
+            <a class="text-lg" href="https://www.facebook.com/groups/HashimotosHealingfood">
+                Facebook
+            </a>
+        </li>
+        <li>
+            <div class="fas fa-envelope"></div>
+            <a class="text-lg" href="mailto:boostly@gmail.com">
+                Mail
+            </a>
+        </li>
+    </ul>
+</div>
+
+<div class="progress" [class.hidden]="menuOpen">
+
+    <div class="progress-row color-white" [class.hidden]="currentSlide !== 0">
+        Swipa / Scrolla för att utforska
+        <div class="progress-row-swipe-indicator forward">
+            &raquo;
+        </div>
+    </div>
+
+    <div class="progress-row back color-white" *ngIf="progress > 95" (click)="setStep(0)">
+        <div class="progress-row-swipe-indicator backward">
+            &laquo;
+        </div>
+        Tillbaka till start
+    </div>
+
+    <div class="progress-bar">
+        <div class="progress-bar-fill" [style.width.%]="progress">
+        </div>
+    </div>
+    <div class="progress-row color-pink" [class.hidden]="currentSlide !== 0">
+        Eller använd tangenterna
+    </div>
+</div>

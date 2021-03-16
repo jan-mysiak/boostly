@@ -1,5 +1,5 @@
+import { SlidesModule } from './slides/slides.module';
 import { NavigationModule } from './navigation/navigation.module';
-import { SectionsModule } from './sections/sections.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -13,7 +13,7 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SectionsModule,
+    SlidesModule,
     NavigationModule,
   ],
   providers: [],

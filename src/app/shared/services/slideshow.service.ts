@@ -4,22 +4,23 @@ import { BehaviorSubject } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class SectionService {
+export class SlideshowService {
   _step = new BehaviorSubject(0);
-  stepCount = 0;
+  stepLength = 0;
 
-  get currentStep() {
+  get step() {
     return this._step.value;
   }
-  set currentStep(step: number) {
-    if (this.stepCount < 1) {
-      throw new Error("Step count invalid");
+  set step(val: number) {
+    if (!this.stepLength) {
+      throw new Error("Step length not set");
     }
 
-    const validStep = (this.stepCount - step) >= 0 && step >= 0;
+    // Within bounds & larger than zero
+    const isValid = (this.stepLength - val) >= 0 && val >= 0;
 
-    if (validStep) {
-      this._step.next(step);
+    if (isValid) {
+      this._step.next(val);
     }
   }
 
