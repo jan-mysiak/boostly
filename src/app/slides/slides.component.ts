@@ -72,9 +72,11 @@ export class SlidesComponent implements AfterContentInit, OnDestroy {
   }
 
   @HostListener("wheel", ["$event"]) onWheelScroll(e: WheelEvent) {
+    if (!e.ctrlKey) {
+      e.preventDefault();
+    }
     // Scroll to next/prev if not already scrolling
     if (!this.scrollTimer && !e.ctrlKey) {
-      e.preventDefault();
       const next = this.nextStep(e.deltaY > 0);
       this.setStep(next);
     }
@@ -88,7 +90,11 @@ export class SlidesComponent implements AfterContentInit, OnDestroy {
 
   // Touch
   @HostListener("touchstart", ["$event"]) onTouchStart(e: TouchEvent) {
-    if (!this.startTouch) {
+    const elem = e.target as Element;
+    const validTouch = !this.startTouch && !e.altKey && !e.ctrlKey && !elem.classList.contains("btn");
+
+    if (validTouch) {
+      e.preventDefault();
       this.startTouch = e.touches[0].clientX;
     }
   }
@@ -133,7 +139,7 @@ export class SlidesComponent implements AfterContentInit, OnDestroy {
   }
 
   setActive(index: number) {
-    this.slides[index].classList.add("active");
+    this.slides[index]?.classList.add("active");
   }
 
   setInactive(index: number) {

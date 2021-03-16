@@ -9,11 +9,12 @@
     width: 21rem;
     transition: left 0.6s var(--default-bezier);
     background: white;
-    padding: 1rem 2rem;
+    padding: 2rem 2rem;
     display: flex;
     flex-direction: column;
     z-index: 999;
     outline: solid 1px transparent;
+    border-right: c.$default-border;
 
     &.active {
         left: 0;
@@ -23,7 +24,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 4rem;
+        margin-bottom: 6rem;
     }
 
     &-close {
@@ -41,9 +42,9 @@
 
     &-links {
         border-bottom: c.$default-border;
-        border-top: c.$default-border;
-        padding-top: 1rem;
         margin-bottom: 1rem;
+        // border-top: c.$default-border;
+        // padding-top: 1rem;
     }
 
     &-link {
