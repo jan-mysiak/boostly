@@ -7,7 +7,6 @@
         color: var(--color-white);
     }
     &.center {
-        align-items: center;
         text-align: center;
 
         & .card-body,
@@ -26,12 +25,14 @@
         &-item {
             margin: var(--space-sm);
             max-width: 45ch;
-            flex: 1 1 45ch;
+            flex: 1 1 1;
 
             &-title {
                 margin-bottom: var(--space-xs);
             }
             &-content {
+                word-break: break-all;
+                
                 &.indent {
                     padding-left: var(--space-sm);
                     // border-left: solid 1px;
@@ -57,4 +58,7 @@
     & > * {
         flex: 1 1 1;
     }
+}
+
+@media (min-width: 966px) {
 }

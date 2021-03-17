@@ -45,13 +45,11 @@
 
         &-logo {
             max-width: 4rem;
-            transition: transform 0.3s, max-width 0.3s;
-            transition-delay: 0.8s;
+            transition: opacity 0.3s linear 0.8s;
 
             &.hidden {
-                transition-delay: 0s;
-                transform: translate(-5rem, -10rem);
-                max-width: 0px;
+                transition-delay: 0;
+                opacity: 0;
             }
         }
     }
@@ -107,6 +105,18 @@
 @media (min-width: c.$width-breakpoint) {
     .header {
         justify-content: center;
+
+        &-brand-logo {
+            transition: transform 0.3s, max-width 0.3s;
+            transition-delay: 0.8s;
+            
+            &.hidden {
+                opacity: 1;
+                transition-delay: 0s;
+                transform: translate(-5rem, -10rem);
+                max-width: 0px;
+            }
+        }
     }
 
     .hamburger {

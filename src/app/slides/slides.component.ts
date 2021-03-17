@@ -35,10 +35,12 @@ export class SlidesComponent implements AfterContentInit, OnDestroy {
   ngAfterContentInit(): void {
     const slidesCollection = this.ref.nativeElement.children as Element[];
 
+    // Populate slides
     for (const slide of slidesCollection) {
       this.slides.push(slide);
     }
 
+    // Initialize service
     this.slideshowService.stepLength = this.slides.length - 1;
     this.slideshowSubscription = this.slideshowService.subscribe(this.onStepChange.bind(this));
 
@@ -117,6 +119,7 @@ export class SlidesComponent implements AfterContentInit, OnDestroy {
   handleScrollEnd() {
     window.clearTimeout(this.scrollTimer);
 
+    // Mostly to handle smooth scroll which takes forever to stop firing
     const temp = this.scrollTimer = window.setTimeout(() => {
       if (temp === this.scrollTimer) {
         this.setActive(this.slideshowService.step);
@@ -127,6 +130,7 @@ export class SlidesComponent implements AfterContentInit, OnDestroy {
 
   onStepChange(step: number) {
     if (step !== this.currentSlide) {
+      this.setInactive(this.currentSlide);
 
       // Temporary
       if (Math.abs(step - this.currentSlide) > 1) {
@@ -159,7 +163,6 @@ export class SlidesComponent implements AfterContentInit, OnDestroy {
 
   setActive(index: number) {
     this.slides[index]?.classList.add("active");
-    // this.slides[index]?.classList.remove("inactive");
   }
 
   toggleZoom() {
@@ -168,9 +171,9 @@ export class SlidesComponent implements AfterContentInit, OnDestroy {
     })
   }
 
-  // setInactive(index: number) {
-  //   this.slides[index]?.classList.add("inactive");
-  // }
+  setInactive(index: number) {
+    this.slides[index]?.classList.remove("active");
+  }
 
   nextStep(shouldIncrement: boolean) {
     return this.currentSlide + (shouldIncrement ? 1 : -1)
