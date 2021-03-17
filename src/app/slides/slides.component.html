@@ -1,15 +1,22 @@
 <div class="slide active">
     <div id="home" class="bg-full">
-        <div class="card light center">
-            <h2 class="card-header font-lobster">
-                Välkommen till <div class="color-pink">Boostly</div>
-            </h2>
-            <p class="card-body text-light">
-                {{filler.slice(0, 234)}}
-            </p>
+        <div class="card color-white center">
+            <h1 class="card-header font-lobster">
+                Välkommen till
+                <div class="color-pink">
+                    Boostly
+                </div>
+            </h1>
+            <div class="card-body">
+                <div class="card-body-item">
+                    <p class="card-body-item-content">
+                        {{filler.slice(0, 199)}}.
+                    </p>
+                </div>
+            </div>
             <div class="card-footer">
-                <button class="btn btn-gray" (click)="setStep(1)">Se mer</button>
-                <button class="btn btn-fill-pink" (click)="setStep(slides.length - 1)">Intresseanmälan</button>
+                <button class="btn-gray" (click)="setStep(1)">Se mer</button>
+                <button class="btn-pink" (click)="setStep(4)">Intresseanmälan</button>
             </div>
         </div>
     </div>
@@ -17,13 +24,26 @@
 <div class="slide">
     <div id="wellness">
         <div class="card">
-            <h5 class="card-header text-bold">Wellness</h5>
-            <p class="card-body indent">
-                {{filler.slice(0,298)}}.
-            </p>
+            <h4 class="card-header text-upper text-black">
+                Wellness
+            </h4>
+            <div class="card-body">
+                <div class="card-body-item">
+                    <h5 class="card-body-item-title text-black">Flex Ett</h5>
+                    <p class="card-body-item-content indent">
+                        {{filler.slice(0, 199)}}.
+                    </p>
+                </div>
+                <div class="card-body-item">
+                    <h5 class="card-body-item-title text-black">Flex Två</h5>
+                    <p class="card-body-item-content indent">
+                        {{filler.slice(0, 139)}}.
+                    </p>
+                </div>
+            </div>
             <div class="card-footer">
-                <button class="btn btn-gray" (click)="setStep(0)">Tillbaka</button>
-                <button class="btn btn-fill-pink" (click)="setStep(2)">Nästa</button>
+                <button class="btn-gray" (click)="setStep(0)">Tillbaka</button>
+                <button class="btn-pink" (click)="setStep(2)">Nästa</button>
             </div>
         </div>
     </div>
@@ -31,20 +51,26 @@
 <div class="slide">
     <div id="recipes" class="bg-full">
         <div class="card light">
-            <h5 class="card-header text-bold">Recept</h5>
-            <div class="card-body indent">
-                <p>
-                    {{filler.slice(0,168)}}.
-                </p>
-                <br />
-                <p>
-                    {{filler.slice(0,210)}}.
-                </p>
-
+            <h4 class="card-header text-upper text-black">
+                Recept
+            </h4>
+            <div class="card-body">
+                <div class="card-body-item">
+                    <h5 class="card-body-item-title text-black">Flex Ett</h5>
+                    <p class="card-body-item-content indent">
+                        {{filler.slice(0, 199)}}.
+                    </p>
+                </div>
+                <div class="card-body-item">
+                    <h5 class="card-body-item-title text-black">Flex Två</h5>
+                    <p class="card-body-item-content indent">
+                        {{filler.slice(0, 139)}}.
+                    </p>
+                </div>
             </div>
             <div class="card-footer">
-                <button class="btn btn-gray" (click)="setStep(1)">Tillbaka</button>
-                <button class="btn btn-fill-pink" (click)="setStep(3)">Nästa</button>
+                <button class="btn-gray" (click)="setStep(1)">Tillbaka</button>
+                <button class="btn-pink" (click)="setStep(3)">Nästa</button>
             </div>
         </div>
     </div>
@@ -52,13 +78,26 @@
 <div class="slide">
     <div id="about-us">
         <div class="card">
-            <h5 class="card-header text-bold">Om oss</h5>
-            <p class="card-body indent">
-                {{filler.slice(0,235)}}.
-            </p>
+            <h4 class="card-header text-upper text-black">
+                Om oss
+            </h4>
+            <div class="card-body">
+                <div class="card-body-item">
+                    <h5 class="card-body-item-title text-black">Flex Ett</h5>
+                    <p class="card-body-item-content indent">
+                        {{filler.slice(0, 199)}}.
+                    </p>
+                </div>
+                <div class="card-body-item">
+                    <h5 class="card-body-item-title text-black">Flex Två</h5>
+                    <p class="card-body-item-content indent">
+                        {{filler.slice(0, 139)}}.
+                    </p>
+                </div>
+            </div>
             <div class="card-footer">
-                <button class="btn btn-gray" (click)="setStep(2)">Tillbaka</button>
-                <button class="btn btn-fill-pink" (click)="setStep(4)">Intresseanmälan</button>
+                <button class="btn-gray" (click)="setStep(2)">Tillbaka</button>
+                <button class="btn-pink" (click)="setStep(4)">Nästa</button>
             </div>
         </div>
     </div>
@@ -70,19 +109,21 @@
 
                 <img src="assets/img/logo/logo-white.svg" class="register-logo" />
 
-                <h5 class="font-lobster">
+                <h3 class="font-lobster">
                     Ta ditt första steg mot
                     <div>
                         Thyroid Wellness
                     </div>
-                </h5>
+                </h3>
             </div>
+
+            <br />
 
             <p class="text-bold m-2 mb-1">Lämna en intresseanmälan</p>
 
             <div class="card-body form">
                 <input type="text" class="text-input" placeholder="Din mailadress.." />
-                <button class="btn btn-async" (click)="send()">Skicka intresseanmälan</button>
+                <button class="btn-async" (click)="send()">Skicka intresseanmälan</button>
             </div>
 
             <p [class.hidden]="!sent" class="sent-text text-bold" style="margin-top: 1rem">Intresseanmälan är inte öppen

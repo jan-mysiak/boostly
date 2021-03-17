@@ -24,24 +24,30 @@
             &times;
         </div>
     </div>
-    <ul class="menu-links">
+    <ul class="menu-links text-upper">
         <li class="menu-link" (click)="setStep(0)" [class.active]="currentSlide === 0">
-            <h5>Hem</h5>
+            <h4>Hem</h4>
         </li>
         <li class="menu-link" (click)="setStep(1)" [class.active]="currentSlide === 1">
-            <h5>Wellness</h5>
+            <h4>Wellness</h4>
         </li>
         <li class="menu-link" (click)="setStep(2)" [class.active]="currentSlide === 2">
-            <h5>Recept</h5>
+            <h4>Recept</h4>
         </li>
         <li class="menu-link" (click)="setStep(3)" [class.active]="currentSlide === 3">
-            <h5>Om oss</h5>
+            <h4>Om oss</h4>
+        </li>
+
+        <hr />
+
+        <li>
+            <h5 class="menu-register-link color-pink text-upper" (click)="setStep(4)"
+                [class.active]="currentSlide === 4">
+                Intresseanmälan
+            </h5>
         </li>
     </ul>
 
-    <h6 class="menu-register-link color-pink" (click)="setStep(4)" [class.active]="currentSlide === 4">
-        Intresseanmälan
-    </h6>
     <!-- <button class="btn btn-fill-pink w-100 mb-8" (click)="setStep(4)">Intresseanmälan</button> -->
 
     <ul class="menu-socials">

@@ -1,4 +1,4 @@
-@use "../0-base/contants" as c;
+@use "../0-base/constants" as c;
 @use "../2-helpers/animations";
 
 .header {
@@ -46,7 +46,7 @@
         &-logo {
             max-width: 4rem;
             transition: transform 0.3s, max-width 0.3s;
-            transition-delay: .8s;
+            transition-delay: 0.8s;
 
             &.hidden {
                 transition-delay: 0s;
@@ -84,8 +84,8 @@
 
     &-line {
         height: 5px;
-        width: 3rem;
-        margin: 10px 0;
+        width: max(40px, 3rem);
+        margin: max(5px, 0.6rem) 0;
         background-color: c.$white;
         transition: background-color 0.3s ease-out;
 

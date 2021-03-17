@@ -24,12 +24,12 @@ export class NavigationComponent {
     if (this.slideshowService.stepLength) {
       this.progress = (step / this.slideshowService.stepLength) * 100;
       this.currentSlide = step;
-
     }
   }
 
   setStep(step: number) {
     this.menuOpen = false;
+
     setTimeout(() => {
       this.slideshowService.step = step;
     }, 300)

@@ -4,7 +4,10 @@
     --color-white: #ffffff;
     --font-primary: "Montserrat", sans-serif;
     --font-secondary: "Lobster", cursive;
-    --magic-number: 2rem;
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 2rem;
+    --space-lg: 4rem;
     --default-bezier: cubic-bezier(0.4, 0.1, 0.2, 1);
     --border-radius: 6px;
     --width-breakpoint: 966px;
@@ -20,6 +23,5 @@ $font-secondary: "Lobster", cursive;
 // misc
 $default-bezier: cubic-bezier(0.4, 0.1, 0.2, 1);
 $width-breakpoint: 966px;
-$magic-number: var(--magic-number);
 $border-radius: 6px;
 $default-border: solid 1px rgba(#333, 0.3);

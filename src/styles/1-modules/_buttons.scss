@@ -1,5 +1,5 @@
 @use "../2-helpers/animations";
-@use "../0-base/contants" as c;
+@use "../0-base/constants" as c;
 
 $pink: var(--color-pink);
 $white: var(--color-white);
@@ -41,37 +41,44 @@ $gray: var(--color-gray);
     border: none;
     // border: solid 1px rgba(0, 0, 0, 0.3);
     border: solid 1px rgba(#333, 0.6);
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     border-radius: var(--border-radius);
     position: relative;
-    padding: 0.35rem 1rem;
+    padding: .4rem .6rem;
     text-transform: uppercase;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: .9rem;
     font-family: var(--font-primary);
     font-weight: 600;
     text-overflow: ellipsis;
     @extend .smooth-transition;
 
     &-white {
+        @extend .btn;
         @include defaultBtn($pink, $white);
     }
     &-pink {
+        @extend .btn;
         @include defaultBtn($white, $pink);
     }
     &-gray {
+        @extend .btn;
         @include defaultBtn($white, $gray);
     }
     &-fill-white {
+        @extend .btn;
         @include fillBtn($white, $pink);
     }
     &-fill-pink {
+        @extend .btn;
         @include fillBtn($pink, $white);
     }
     &-fill-gray {
+        @extend .btn;
         @include fillBtn($gray, $white);
     }
     &-async {
+        @extend .btn;
         transition: background-color 0.5s;
         // background-color: var(--color-gray);
         // color: var(--color-white);

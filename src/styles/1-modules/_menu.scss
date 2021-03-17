@@ -1,4 +1,4 @@
-@use "../0-base/contants" as c;
+@use "../0-base/constants" as c;
 
 .menu {
     position: fixed;
@@ -24,7 +24,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 6rem;
+        // margin-bottom: var(--space-lg);
     }
 
     &-close {
@@ -41,8 +41,9 @@
     }
 
     &-links {
-        border-bottom: c.$default-border;
         margin-bottom: 1rem;
+        margin: auto 0;
+        // border-bottom: c.$default-border;
         // border-top: c.$default-border;
         // padding-top: 1rem;
     }
@@ -56,8 +57,8 @@
         border-left: solid 0rem transparent;
         padding-left: 0rem;
 
-        & h5 {
-            letter-spacing: -2px;
+        & h4 {
+            letter-spacing: -0.2rem;
         }
 
         &.active {
@@ -78,6 +79,7 @@
         border-left: solid 0px transparent;
         padding-left: 0rem;
         cursor: pointer;
+        margin-top: var(--space-sm);
 
         &.active {
             padding-left: 1rem;

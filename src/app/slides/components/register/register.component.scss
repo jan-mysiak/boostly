@@ -50,7 +50,7 @@
     }
 }
 
-:host.active {
+.active {
     & .register-logo {
         max-width: 6rem;
         transform: translate(0, 0);

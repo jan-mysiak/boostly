@@ -127,24 +127,50 @@ export class SlidesComponent implements AfterContentInit, OnDestroy {
 
   onStepChange(step: number) {
     if (step !== this.currentSlide) {
-      this.setInactive(this.currentSlide);
-      this.currentSlide = step;
 
-      this.slides[step]?.scrollIntoView({
-        behavior: "smooth",
-        inline: "start",
-        block: "start"
-      });
+      // Temporary
+      if (Math.abs(step - this.currentSlide) > 1) {
+        this.toggleZoom();
+
+        window.setTimeout(() => {
+          this.currentSlide = step;
+          this.goTo(step);
+        }, 300);
+
+        window.setTimeout(() => {
+          this.toggleZoom();
+        }, 900)
+
+        return;
+      }
+
+      this.goTo(step);
+      this.currentSlide = step;
     }
+  }
+
+  goTo(step: number) {
+    this.slides[step]?.scrollIntoView({
+      behavior: "smooth",
+      inline: "start",
+      block: "start"
+    });
   }
 
   setActive(index: number) {
     this.slides[index]?.classList.add("active");
+    // this.slides[index]?.classList.remove("inactive");
   }
 
-  setInactive(index: number) {
-    this.slides[index]?.classList.remove("active");
+  toggleZoom() {
+    this.slides.forEach(s => {
+      s.classList.toggle("zoom-out");
+    })
   }
+
+  // setInactive(index: number) {
+  //   this.slides[index]?.classList.add("inactive");
+  // }
 
   nextStep(shouldIncrement: boolean) {
     return this.currentSlide + (shouldIncrement ? 1 : -1)

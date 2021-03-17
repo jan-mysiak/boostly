@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   template: `
   <div id="register">
     <div class="card light center">
-      <div class="card-header font-lobster">
+      <div class="card-header">
 
           <img src="assets/img/logo/logo-white.svg" class="register-logo" />
 

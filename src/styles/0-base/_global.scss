@@ -1,6 +1,5 @@
 html {
-    font-size: 14px;
-    line-height: 1.6;
+    font-size: clamp(10px, 2vw, 16px);
 }
 
 * {
@@ -46,15 +45,15 @@ a {
     text-decoration: none;
     color: var(--color-gray);
     font-weight: 400;
-    
+
     &:hover {
         color: var(--color-pink);
-        transition: color .3s linear;
-    } 
-}
-
-@media (min-width: 966px) {
-    html {
-        font-size: 18px;
+        transition: color 0.3s linear;
     }
 }
+
+// @media (min-width: 966px) {
+//     html {
+//         font-size: 18px;
+//     }
+// }
